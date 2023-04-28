@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+       
+      </div>
+      <div class="col-5 mt-3">
+        <div class="container bg-secondary">
+            <h1 class="text-light">Conversão de Moedas</h1>
+            <div class="form-group">
+              <label  class="text-light" for="valorReal">Valor em Reais:</label>
+              <input type="number" class="form-control" id="valorReal" [(ngModel)]="valorReal" name="valorReal">
+            </div>
+            <div class="form-group">
+              <label  class="text-light" for="taxaDolar">Câmbio do dia em Dólar:</label>
+              <input type="number" class="form-control" id="taxaDolar" [(ngModel)]="taxaDolar" name="taxaDolar">
+            </div>
+            <div class="form-group">
+              <label  class="text-light" for="taxaEuro">Câmbio do dia em Euro:</label>
+              <input type="number" class="form-control" id="taxaEuro" [(ngModel)]="taxaEuro" name="taxaEuro">
+            </div>
+            <div class="form-group">
+              <label  class="text-light" for="taxaLibra">Câmbio do dia em Libra Esterlina:</label>
+              <input type="number" class="form-control" id="taxaLibra" [(ngModel)]="taxaLibra" name="taxaLibra">
+            </div>
+            <button class="btn btn-primary mt-3" (click)="converter()">Converter</button>
+            <br><br>
+            <div *ngIf="resultado">
+              <p class="text-light">Valor em Dólares: {{resultado.dolar}}</p>
+              <p class="text-light">Valor em Euros: {{resultado.euro}}</p>
+              <p class="text-light">Valor em Libras Esterlinas: {{resultado.libra}}</p>
+            </div>
+          </div>
+          
+      </div>
+      <div class="col-sm">
+        
+      </div>
+    </div>
+  </div>
